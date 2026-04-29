@@ -31,7 +31,18 @@
   font-style: normal;
 }
 .body {
-  background-color: #111111;
+  background:
+    radial-gradient(
+      circle 600px at calc(50%) 90%,
+      rgba(106, 13, 173, 0.4),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle 600px at 75% 15%,
+      rgba(106, 13, 173, 0.5),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #0b0b0f 0%, #0f0f14 50%, #111111 100%);
   color: #ffffff;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -81,7 +92,28 @@
 .header__link {
   text-decoration: none;
   color: #ffffff;
+  background-image: linear-gradient(
+    90deg,
+    rgba(48, 25, 52, 1) 0%,
+    rgba(75, 0, 130, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
+  background-position: 0 100%;
+  padding-bottom: 5px;
   margin-bottom: 120px;
+  transition:
+    color 0.3s ease,
+    background-image 0.3s ease;
+}
+.header__link:hover {
+  color: rgba(106, 13, 173, 1);
+  background-image: linear-gradient(
+    90deg,
+    rgba(106, 13, 173, 1),
+    rgba(147, 112, 219, 1)
+  );
+  cursor: pointer;
 }
 .content__title {
   font-family: "Archivo Black", "Arial", sans-serif;
@@ -117,9 +149,9 @@
 }
 
 .card {
-  background-color: #2b2b2b;
+  background-color: #1c1c1c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   max-width: 590px;
@@ -175,6 +207,10 @@
   display: inline-block;
   margin-bottom: 30px;
   text-decoration: none;
+  color: rgba(106, 13, 176, 1);
+}
+.footer__email:hover {
+  color: rgba(106, 13, 176, 0.5);
 }
 .footer__social {
   display: flex;
@@ -185,4 +221,10 @@
 .footer__social-icon {
   width: 24px;
   height: 24px;
+  filter: brightness(1) grayscale(0);
+}
+.footer__social-icon:hover {
+  opacity: 1;
+  filter: invert(12%) sepia(93%) saturate(4647%) hue-rotate(272deg)
+    brightness(91%) contrast(116%);
 }
