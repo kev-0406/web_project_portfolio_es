@@ -250,3 +250,47 @@
   filter: invert(12%) sepia(93%) saturate(4647%) hue-rotate(272deg)
     brightness(91%) contrast(116%);
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .page {
+    padding: 0 40px;
+  }
+  .header {
+    gap: 20px;
+  }
+  .header__image {
+    width: 216px;
+    height: 280px;
+  }
+  .header__text {
+    margin-bottom: 50px;
+  }
+  .header__name {
+    font-size: 58px;
+  }
+  .header__link {
+    gap: 20px;
+  }
+  .content__title {
+    margin-bottom: 44px;
+  }
+  .content__icons {
+    margin-bottom: 80px;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .content__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    max-width: 688px;
+  }
+  .card__image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .content__cards {
+    margin-bottom: 20px;
+  }
+}
